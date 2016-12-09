@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tubes;
+package Model;
+
+import java.io.Reader;
+import java.util.Date;
 
 /**
  *
@@ -12,8 +15,16 @@ package tubes;
 public class Admin extends Orang {
     private String No_admin;
 
-    public Admin(String string, String date, String string0, char charAt, String string1, String string2, String string3) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Admin(String No_admin, String nama, String ttl, String alamat, String password, String email, char jenisKelamin) {
+        super(nama, ttl, alamat, password, email, jenisKelamin);
+        this.No_admin = No_admin;
+    }
+
+    public Admin(){
+    }
+    
+    public String getnoadm(){
+        return this.No_admin;
     }
     
     public Anggota Cari_Anggota(Anggota[] anggota, Anggota agt){
@@ -71,20 +82,9 @@ public class Admin extends Orang {
         if(tmp == null){
             System.out.println("Anggota tidak ditemukan");
         }else{
-            System.out.println("Nama \t : "+tmp.Cek_Angsuran());
         }
     }
     
-    public void Cek_Pinjaman_Total(Anggota [] anggota){
-        int sum = 0;
-        for (int i = 0 ; i++ ; i < anggota.length){
-            if(anggota[i].Get_Pinjam_Uang() == true){
-                sum = anggota[i].Get_Peminjaman().Get_Amount() + sum;
-            }
-        }
-        
-        System.out.println("Jumlah yang dibayarkan : "+sum);
-    }
     
     public void Cek_Keuangan(Anggota[] anggota){
         int i = 0;

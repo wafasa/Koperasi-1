@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tubes;
+package Model;
+
+import Controller.ControllerLogin;
 
 /**
  *
@@ -16,6 +18,7 @@ public class Tubes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ControllerLogin login = new ControllerLogin();
     }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tubes;
+package Model;
 
 
 public class Anggota extends Orang{
@@ -16,13 +16,16 @@ public class Anggota extends Orang{
     public Anggota() {
     }
 
-    public Anggota(String No_anggota, Tabungan tabungan, boolean Pinjam_Uang, boolean Status_Pinjaman, Peminjaman peminjaman) {
+    public Anggota(String No_anggota, Tabungan tabungan, boolean Pinjam_Uang, boolean Status_Pinjaman, Peminjaman peminjaman, String nama, String ttl, String alamat, String password, String email, char jenisKelamin) {
+        super(nama, ttl, alamat, password, email, jenisKelamin);
         this.No_anggota = No_anggota;
         this.tabungan = tabungan;
         this.Pinjam_Uang = Pinjam_Uang;
         this.Status_Pinjaman = Status_Pinjaman;
         this.peminjaman = peminjaman;
     }
+
+    
 
     public void setTabungan(Tabungan tabungan) {
         this.tabungan = tabungan;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tubes;
+package Model;
 
 import java.util.Date;
 
@@ -13,22 +13,35 @@ import java.util.Date;
  */
 public abstract class Orang {
     private String nama;
-    private Date ttl;
+    private String ttl;
     private String alamat;
     private String password;
     public String email;
     public char jenisKelamin;
+
+    public Orang(String nama, String ttl, String alamat, String password, String email, char jenisKelamin) {
+        this.nama = nama;
+        this.ttl = ttl;
+        this.alamat = alamat;
+        this.password = password;
+        this.email = email;
+        this.jenisKelamin = jenisKelamin;
+    }
     
+    public Orang (){
+        
+    }
+       
     public void setNama(String nama){
         this.nama = nama;
 }
     public String Get_Nama (){
         return nama;
 }
-    public void setTtl (Date ttl){
+    public void setTtl (String ttl){
         this.ttl = ttl;
 }
-    public Date getTtl (){
+    public String getTtl (){
         return ttl;
 }
     public void setAlamat (String alamat){

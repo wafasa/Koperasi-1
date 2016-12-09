@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package tubes;
+package Model;
 
 import java.util.ArrayList;
 
@@ -13,16 +13,20 @@ import java.util.ArrayList;
 public class Peminjaman {
     private int Amount;
     private int Time;
-    private ArrayList<Angsuran> Bayar_Angsuran;
+    private int Bayar_Angsuran;
+
+    public Peminjaman() {
+        this.Amount = 0;
+    }
     
-    public Peminjaman(int Amount, int Time, ArrayList<Angsuran> Bayar_Angsuran) {
+    public Peminjaman(int Amount, int Time, int Bayar_Angsuran) {
         this.Amount = Amount;
         this.Time = Time;
         this.Bayar_Angsuran = Bayar_Angsuran;
     }
 
-    public void Bayar_Angsuran(ArrayList<Angsuran> Bayar_Angsuran) {
-        this.Bayar_Angsuran = Bayar_Angsuran;
+    public void Bayar_Angsuran(int Bayar_Angsuran) {
+        this.Bayar_Angsuran += Bayar_Angsuran;
     }
 
     public String info_Pinjaman() {
@@ -31,5 +35,9 @@ public class Peminjaman {
     
     public int Get_Amount(){
         return Amount;
+    }
+    
+    public int getAngsuran(){
+        return Bayar_Angsuran;
     }
 }
